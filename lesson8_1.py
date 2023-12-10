@@ -1,6 +1,6 @@
 import random #亂數內建
 import pyinputplus as pyip
-while(10):
+while(True):
     min = 1
     max = 5
     count = 0
