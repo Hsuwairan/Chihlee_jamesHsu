@@ -1,25 +1,29 @@
-import random #亂數內建
+import random
 import pyinputplus as pyip
 while(True):
     min = 1
-    max = 5
+    max = 100
     count = 0
-    randomnum = random.randint(min,max)
-    print(randomnum)
+    randomNum = random.randint(min,max)
+    print(randomNum)
+    print("===========猜數字遊戲=============")
     while True:
         keyin = pyip.inputInt(f"猜數字範圍{min}~{max}:",min=min,max=max)
         print(keyin)
-        if keyin == randomnum:
-            print("猜對")
+        count += 1
+        if(keyin == randomNum):
+            print(f"賓果!猜對了, 答案是:{randomNum}")
+            print(f"您共猜了:{count}次")
             break
-        elif keyin > randomnum:
-            print("在小點")
+        elif keyin > randomNum:
+            print("再小一點")
             max = keyin - 1
-        elif keyin < randomnum:
-            print("在大點")
+        elif keyin < randomNum:
+            print("再大一點")
             min = keyin + 1
-        print(f"猜{count}")
-pyip.inputYesNo("你還要繼續玩嗎?(y,n)")
-if is_play == "no":
-    break
-print("Game Over")
+        print(f"您已經猜了{count}次")
+    is_play = pyip.inputYesNo("您還要繼續玩嗎?(y,n):")
+    if is_play=="no":
+        break
+    
+print("Game Over!")
