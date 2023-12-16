@@ -1,13 +1,9 @@
 from machine import Pin
-import time
+from machine import Timer
 
-led = Pin("LED",Pin.OUT)
-while True: 
-    led.on()
-    time.sleep_ms(100)
-    led.off()
-    time.sleep_ms(100)
-    led.on()
-    time.sleep_ms(100)
-    led.off()
-    time.sleep_ms(100)
+def mycallback(10)
+p0 = Pin("LED",Pin.OUT)
+tim.init(period=100,callback=mycallback)
+
+#p0.Value(1)
+    
