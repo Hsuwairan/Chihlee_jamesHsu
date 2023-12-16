@@ -1,11 +1,21 @@
-from machine import Pin
 from machine import Timer
 
-def mycallback1(t):
+def callback1(t:Timer):
     print(1)
-def mycallback2(t):
-    print(2)    
+    
+def callback2(t:Timer):
+    print(2)
+    
+def callback3(t:Timer):
+    print(3)
+    t.deinit()
+    
 time1 = Timer()
-time1.init(freq=1,period=1000,callback=mycallback1)
+time1.init(freq=1,callback=callback1)
+
 time2 = Timer()
-time2.init(freq=1,period=2000,callback=mycallback2)
+
+time2.init(period=2000,callback=callback2)
+
+time3 = Timer()
+time3.init(period=3000,callback=callback3)
