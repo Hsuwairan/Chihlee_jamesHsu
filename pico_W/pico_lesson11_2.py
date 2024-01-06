@@ -2,6 +2,7 @@ import network
 import time
 from machine import WDT
 
+def connect()
 # enable station interface and connect to WiFi access point
 nic = network.WLAN(network.STA_IF)
 nic.active(True)
@@ -31,3 +32,5 @@ else:
     print("成功連線")
     print(nic.ifconfig())
     
+connect()
+
