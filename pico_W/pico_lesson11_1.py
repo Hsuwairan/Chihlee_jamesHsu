@@ -1,5 +1,6 @@
 import network
 import time
+
 from machine import WDT
 # enable station interface and connect to WiFi access point
 nic = network.WLAN(network.STA_IF)
@@ -34,3 +35,15 @@ else:
 
 
     
+=======
+
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect('Robert_iPhone','0926656')
+
+while not wlan.isconnected() and wlan.status() >= 0:
+    print("Waiting to connect:")
+    time.sleep(1)
+    
+print(wlan.ifconfig())
+>>>>>>> 06256d7 (modify)
