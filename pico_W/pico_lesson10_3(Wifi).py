@@ -1,7 +1,7 @@
 import network
 import time
 
-ssid = 'Galaxy S21 Ultra 5G'
+ssid = 'wairan'
 password = '29834762'
 
 wlan = network.WLAN(network.STA_IF)
