@@ -31,7 +31,7 @@ def alert(t:float):
     
 def callback1(t:Timer):
     global start
-    sensor = ADC(4)    
+    sensor = ADC(4) 
     vol = sensor.read_u16() * (3.3/65535)
     temperature = 27 - (vol-0.706) / 0.001721
     print(f'溫度:{temperature}')    
