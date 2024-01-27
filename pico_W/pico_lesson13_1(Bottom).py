@@ -8,8 +8,7 @@ led_status = False
 #switch button
 #解決彈跳
 
-def btn_detect(btn1):
-    global is_press,led_status
+while True:
     if btn.value():
         time.sleep_ms(50)
         if btn.value():
@@ -21,6 +20,5 @@ def btn_detect(btn1):
             led_status = not led_status        
             red_led.value(led_status)        
             is_press = False
-while True:
-    btn_detect(btn)
+
             
